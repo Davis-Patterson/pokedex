@@ -1,0 +1,186 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 200;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f3edc2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --clr-light: #d8d8d8;
+  --clr-lighter: #f1f1f1;
+  --clr-dark: #333333;
+  --clr-darker: #1a1a1a;
+  --clr-primary: #777777;
+  --clr-secondary: #908f7cc5;
+  --clr-accent: #009FFD;
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+header {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30;
+  border-bottom: 5px solid yellow;
+  height: 142px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pokeDex {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 4.2em;
+  font-weight: 900;
+  font-style: italic;
+  line-height: .8;
+  color: yellow;
+  width: 100%;
+  margin: 0;
+  /* -webkit-text-stroke: 4px blue; */
+}
+
+.body {
+  margin: 0px;
+  display: flex;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pokeCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardContainer {
+  width: 150px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 1rem;
+  background-color: var(--clr-secondary);
+  margin: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.cardContainer:hover {
+  transform: scale(102%);
+  background-color: #d6d01598;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.cardContainer:active {
+  background-color: #b2aa0edd;
+  transform: scale(99%);
+  box-shadow: inset  0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pokeNum {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 1em;
+  font-style: italic;
+  color: var(--clr-light);
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+.cardContainer:hover .pokeNum {
+  color: var(--clr-dark);
+}
+
+.pokeSprite {
+  margin-top: 8px;
+}
+
+.pokeSprite:hover {
+  transform: scale(110%);
+  transition: transform 0.2s;
+}
+
+.pokeName {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--clr-lighter);
+  margin-bottom: 10px;
+}
+.cardContainer:hover .pokeName {
+  color: var(--clr-dark);
+}
+
+.footer {
+  margin-top: 1%;
+  border-top: 1px solid var(--clr-secondary);
+  padding: 10px;
+}
+
+.allRights {
+  font-family: "Avant Garde", sans-serif;
+  font-size: 1.2em;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--clr-primary);
+}
