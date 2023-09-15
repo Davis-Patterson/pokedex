@@ -27,21 +27,36 @@ const PokeData = ({ selPokeUrl, setHasSelPoke }) => {
     <>
       <div className='dataContainer'>
         <div className='pokeDataContainer'>
-          <div className='dataImgBox'>
-            <img src={sprites.front_default} alt={name} className='dataImg' />
+          <div className='headerBox'>
+            <h2 className='detailName'>{name}</h2>
           </div>
-          <div className='dataInfo'>
-            <div className='nameBox'>
-              <h2 className='detailName'>{name}</h2>
-            </div>
-            <div className='statsBox'>
-              {stats.map((stat, index) => (
-                <p key={index} className='statsText'>
-                  {stat.stat.name}: {stat.base_stat}
+          <div className='detailBox'>
+            <div className='pokeInfo'>
+              <div className='dataImgBox'>
+                <img
+                  src={sprites.front_default}
+                  alt={name}
+                  className='dataImg'
+                />
+              </div>
+              <div className='infoBox'>
+                <p className='pokeDesc'>
+                  This Pokemon's description should go here. It may be long or
+                  short and this box should be big enough to accomodate.
                 </p>
-              ))}
-            </div>{' '}
-            // pokemon type, moves, weight, etc
+              </div>
+            </div>
+            <div className='statsContainer'>
+              <p className='statsTextStats'>BASE STATS:</p>
+              <div className=''>
+                {stats.map((stat, index) => (
+                  <div key={index} className='statsBox'>
+                    <p className='statsName'>{stat.stat.name}:</p>
+                    <p className='statsStat'>{stat.base_stat}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className='detailButtonBox'>
