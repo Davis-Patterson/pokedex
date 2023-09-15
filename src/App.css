@@ -239,11 +239,62 @@ header {
   border-bottom: 1px solid #c5a100;
 }
 
+.nameBox {
+  width: 50%;
+  display: flex;
+}
+
 .detailName {
   font-family: "Avant Garde", sans-serif;
   font-weight: bold;
   color: var(--clr-darker);
   line-height: 1.2;
+  display: flex;
+  justify-content: left;
+}
+
+.detailId {
+  font-size: 1.5rem;
+  font-family: "Avant Garde", sans-serif;
+  color: var(--clr-darker);
+  line-height: 1.2;
+  display: flex;
+  justify-content: left;
+  margin-right: 8px;
+}
+
+.typeContainer {
+  display: flex;
+  justify-content: right;
+  width: 50%;
+}
+
+.typeText {
+  font-family: "Avant Garde", sans-serif;
+  font-style: italic;
+  color: var(--clr-darker);
+  line-height: 1.2;
+  margin-right: 5px;
+}
+
+.detailType {
+  font-family: "Avant Garde", sans-serif;
+  font-weight: 600;
+  color: var(--clr-darker);
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.typeSeparator {
+  font-family: "Avant Garde", sans-serif;
+  font-weight: bold;
+  color: var(--clr-darker);
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .detailBox {
