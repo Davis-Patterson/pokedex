@@ -48,13 +48,48 @@ const PokeData = ({ selPokeUrl, setHasSelPoke }) => {
             </div>
             <div className='statsContainer'>
               <p className='statsTextStats'>BASE STATS:</p>
-              <div className=''>
+              <div className='statsInfo'>
                 {stats.map((stat, index) => (
                   <div key={index} className='statsBox'>
                     <p className='statsName'>{stat.stat.name}:</p>
                     <p className='statsStat'>{stat.base_stat}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+          <div className='evoContainer'>
+            <div className='evoBox'>
+              <p className='evoText'>Pokemon Evolution Chain Goes In Here</p>
+              <p className='evoText'>ie 'evolved from' & 'evolves into'</p>
+            </div>
+          </div>
+          <div className='statsContainer2'>
+            <p className='statsTextStats'>POKEMON INFO:</p>
+            <div className='statsInfo2'>
+              <div className='statsBox2'>
+                <p className='statsName2'>Is Legendary:</p>
+                <p className='statsStat2'>Yes/No</p>
+              </div>
+              <div className='statsBox2'>
+                <p className='statsName2'>Is Mythical:</p>
+                <p className='statsStat2'>Yes/No</p>
+              </div>
+              <div className='statsBox2'>
+                <p className='statsName2'>Habitat:</p>
+                <p className='statsStat2'>(Habitat data)</p>
+              </div>
+              <div className='statsBox2'>
+                <p className='statsName2'>Growth Rate:</p>
+                <p className='statsStat2'>(Growth rate)</p>
+              </div>
+              <div className='statsBox2'>
+                <p className='statsName2'>Base Happiness:</p>
+                <p className='statsStat2'>(Base happiness)</p>
+              </div>
+              <div className='statsBox2'>
+                <p className='statsName2'>Capture Rate</p>
+                <p className='statsStat2'>(Capture rate)</p>
               </div>
             </div>
           </div>
