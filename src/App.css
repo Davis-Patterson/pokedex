@@ -47,21 +47,22 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 2px solid #ffd000;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff87;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #827500;
+  background-color: #ffffffe5;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:active {
+  border-color: #ffc800;
+  background-color: #ffffff19;
 }
 
 header {
@@ -115,6 +116,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .cardContainer {
@@ -125,6 +128,7 @@ header {
   margin: 4px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   position: relative;
+  cursor: pointer;
 }
 .cardContainer:hover {
   transform: scale(102%);
@@ -152,11 +156,15 @@ header {
 }
 
 .pokeSprite {
-  margin-top: 8px;
+  margin-top: 18px;
 }
 
-.pokeSprite:hover {
+.cardContainer:hover .pokeSprite {
   transform: scale(110%);
+  transition: transform 0.2s;
+}
+.cardContainer:active .pokeSprite {
+  transform: scale(99%);
   transition: transform 0.2s;
 }
 
@@ -168,6 +176,71 @@ header {
   margin-bottom: 10px;
 }
 .cardContainer:hover .pokeName {
+  color: var(--clr-dark);
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokeDataContainer {
+  display: flex;
+}
+
+.dataImgBox {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.dataImg {
+  width: 150px;
+}
+
+.dataInfo {
+  margin-bottom: 20px;
+}
+
+.nameBox {
+  margin-bottom: 6px;
+}
+
+.detailName {
+  font-family: "Avant Garde", sans-serif;
+  font-weight: bold;
+  color: var(--clr-darker);
+  line-height: 1.2;
+}
+
+.statsBox {
+  border: 1px solid #c5a100;;
+  border-radius: 10px; 
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.statsText {
+  font-family: "Avant Garde", sans-serif;
+  font-size: .95em;
+  font-weight: bold;
+  color: var(--clr-dark);
+  line-height: 1.2;
+}
+
+.detailButtonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailButtonText {
+  font-family: "Avant Garde", sans-serif;
+  font-size: .95em;
+  font-weight: bold;
   color: var(--clr-dark);
 }
 

@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const PokeCard = ({ name, url }) => {
-  const [pokemonData, setPokemonData] = useState(null);
+const PokeCard = ({ name, url, setHasSelPoke, setSelPokeUrl }) => {
+  const [pokeData, setPokeData] = useState(null);
 
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
-        setPokemonData(response.data);
+        setPokeData(response.data);
       })
       .catch((error) => {
         console.error('Error fetching Pokemon data:', error);
       });
   }, [url]);
 
+  const handleClick = () => {
+    setHasSelPoke(true);
+    setSelPokeUrl(url);
+  };
+
   return (
     <>
-      <div className='cardContainer'>
-        {pokemonData ? (
+      <div className='cardContainer' onClick={handleClick}>
+        {pokeData ? (
           <>
-            <p className='pokeNum'>#{pokemonData.id}</p>
+            <p className='pokeNum'>#{pokeData.id}</p>
             <img
-              src={pokemonData.sprites.front_default}
+              src={pokeData.sprites.front_default}
               alt={`${name}-img`}
               className='pokeSprite'
             />
